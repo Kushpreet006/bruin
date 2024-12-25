@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Slider</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.testimonials {
+  text-align: center;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+  flex: 1 0 100%;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.controls button {
+  border: none;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #555;
+}
+
+</style>
+<body>
+  <section class="testimonials">
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"This service is absolutely amazing! Highly recommended."</p>
+        <h3>- John Doe</h3>
+      </div>
+      <div class="testimonial">
+        <p>"I’m incredibly satisfied with the quality of work. Will return for sure!"</p>
+        <h3>- Jane Smith</h3>
+      </div>
+      <div class="testimonial">
+        <p>"Professional, efficient, and reliable. A perfect experience!"</p>
+        <h3>- Sam Wilson</h3>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+  <script src="script.js">
+    const testimonials = document.querySelectorAll('.testimonial');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentIndex = 0;
+
+function updateTestimonials(index) {
+  testimonials.forEach((testimonial, i) => {
+    testimonial.classList.toggle('active', i === index);
+  });
+}
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  updateTestimonials(currentIndex);
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  updateTestimonials(currentIndex);
+});
+
+// Initialize
+updateTestimonials(currentIndex);
+
+  </script>
+</body>
+</html>

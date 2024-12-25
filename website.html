@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slick Slider Example</title>
+  
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!-- jQuery (required for Slick) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">MyWebsite</div>
+        
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+        </div>
+      </header>
+      
+      </body>
+
+<div class="slick-slider">
+  <div class="image">
+    <h4>WELCOME TO BRUIN CAFE</h4>
+                      <h1>Enjoy <br>
+                        Morning Coffe <br>
+                        Shot</h1>
+                      <p>Donec vitae libero non enim placerat eleifend aliquam erat volutpat. Curabitur <br>
+                        diam ex, dapibus purus sapien, cursus sed nisl tristique, commodo gravida <br>
+                        lectus non.</p>
+                        <button class="book">BOOK A TABLE</button><BUtton class="visit">VISIT OUR SHOP<BUtton>
+  </div>
+  <div class="img">
+    <h4>WELCOME TO BRUIN CAFE</h4>
+                      <h1>Enjoy <br>
+                        Morning Coffe <br>
+                        Shot</h1>
+                      <p>Donec vitae libero non enim placerat eleifend aliquam erat volutpat. Curabitur <br>
+                        diam ex, dapibus purus sapien, cursus sed nisl tristique, commodo gravida <br>
+                        lectus non.</p>
+                        <button class="book">BOOK A TABLE</button><BUtton class="visit">VISIT OUR SHOP<BUtton>
+  </div>
+</div>
+<header>
+  <h1>Hotel Restaurant Menu</h1>
+</header>
+
+<!-- Menu Content -->
+<div class="menu-section">
+
+  <!-- Appetizers Section -->
+  <h2>Appetizers</h2>
+  <div class="menu-item">
+    <div>
+      <h3>Bruschetta</h3>
+      <p>Grilled bread with tomatoes, garlic, and basil</p>
+    </div>
+    <div class="price">$8.00</div>
+  </div>
+  <div class="menu-item">
+    <div>
+      <h3>Stuffed Mushrooms</h3>
+      <p>Mushrooms stuffed with cheese and herbs</p>
+    </div>
+    <div class="price">$9.50</div>
+  </div>
+
+  <!-- Main Courses Section -->
+  <h2>Main Courses</h2>
+  <div class="menu-item">
+    <div>
+      <h3>Grilled Salmon</h3>
+      <p>Salmon filet with lemon butter sauce</p>
+    </div>
+    <div class="price">$18.00</div>
+  </div>
+  <div class="menu-item">
+    <div>
+      <h3>Chicken Alfredo</h3>
+      <p>Pasta with creamy Alfredo sauce and grilled chicken</p>
+    </div>
+    <div class="price">$15.00</div>
+  </div>
+
+  <!-- Desserts Section -->
+  <h2>Desserts</h2>
+  <div class="menu-item">
+    <div>
+      <h3>Cheesecake</h3>
+      <p>Rich cheesecake with a graham cracker crust</p>
+    </div>
+    <div class="price">$7.00</div>
+  </div>
+  <div class="menu-item">
+    <div>
+      <h3>Chocolate Lava Cake</h3>
+      <p>Warm chocolate cake with a molten center</p>
+    </div>
+    <div class="price">$8.00</div>
+  </div>
+
+  <!-- Beverages Section -->
+  <h2>Beverages</h2>
+  <div class="menu-item">
+    <div>
+      <h3>Freshly Brewed Coffee</h3>
+      <p>100% Arabica coffee beans</p>
+    </div>
+    <div class="price">$3.00</div>
+  </div>
+  <div class="menu-item">
+    <div>
+      <h3>Orange Juice</h3>
+      <p>Freshly squeezed orange juice</p>
+    </div>
+    <div class="price">$4.00</div>
+  </div>
+
+</div>
+
+
+<table>
+  <tr>
+    <td class="latte" rowspan="2"><img src="img1.jpg"  alt=""></td>
+    <td class="latte-tt"><h4>Coffe Latte</h4></td>
+    <td class="latte-tt1"><hr></td>
+    <td class="latte-tt2"><h4>$12.90</h4></td>
+  </tr>
+  <tr>
+    <td><p>Espresso and Light Layer of Crema</p></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.slick-slider').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: true
+    });
+  });
+</script>
+
+</body>
+</html>
